@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal & Compliance Portal | HACYBERGLOBALTECH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent-color: #38bdf8;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --border-color: #334155;
+      --highlight-bg: rgba(56, 189, 248, 0.08);
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    [data-theme="light"] {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --accent-color: #0284c7;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --border-color: #e2e8f0;
+      --highlight-bg: rgba(2, 132, 199, 0.05);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); background-color: var(--bg-color); color: var(--text-primary); line-height: 1.7; transition: all 0.3s ease; }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background-color: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color); padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    [data-theme="light"] header { background-color: rgba(248, 250, 252, 0.85); }
+
+    .brand { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); text-decoration: none; }
+    .brand span { color: var(--accent-color); }
+    .theme-toggle { background: transparent; border: 1px solid var(--border-color); color: var(--text-primary); padding: 0.5rem 1rem; border-radius: 9999px; cursor: pointer; font-size: 0.875rem; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+    .hero-section { 
+      text-align: center; 
+      margin-bottom: 4rem; 
+      padding: 2rem 0;
+    }
+    .hero-section h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
+    .hero-section p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem; }
+
+    .cards-grid {
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 2rem; 
+      margin-top: 3rem;
+    }
+
+    .card {
+      background-color: var(--card-bg); 
+      border: 1px solid var(--border-color); 
+      border-radius: 12px; 
+      padding: 2rem; 
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+    }
+
+    .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .card h2 { font-size: 1.35rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color); }
+    .card p { color: var(--text-secondary); font-size: 0.975rem; }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover { opacity: 0.9; transform: scale(1.05); }
+
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 768px) { 
+      .hero-section h1 { font-size: 1.8rem; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="brand">HACYBER<span>GLOBALTECH</span></a>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">☀️ Light Mode</button>
+  </header>
+
+  <div class="container">
+    <div class="hero-section">
+      <h1>Legal & Compliance Portal</h1>
+      <p>Access HACYBERGLOBALTECH's legal documentation, policies, and compliance information.</p>
+    </div>
+
+    <div class="cards-grid">
+      <a href="privacy-policy.html" class="card">
+        <div>
+          <div class="card-icon">🔒</div>
+          <h2>Privacy Policy</h2>
+          <p>Learn how we collect, use, and protect your personal data. Understand our data practices and your rights.</p>
+        </div>
+        <span class="cta-button">Read Policy →</span>
+      </a>
+
+      <a href="terms-of-service.html" class="card">
+        <div>
+          <div class="card-icon">📋</div>
+          <h2>Terms of Service</h2>
+          <p>Review the terms and conditions governing your use of our services and platforms.</p>
+        </div>
+        <span class="cta-button">Read Terms →</span>
+      </a>
+
+      <a href="https://hacyberglobal.dgdns.org/support" target="_blank" class="card">
+        <div>
+          <div class="card-icon">💬</div>
+          <h2>Support Portal</h2>
+          <p>Need help? Visit our customer support portal for assistance and inquiries.</p>
+        </div>
+        <span class="cta-button">Get Support →</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 HACYBERGLOBALTECH. All rights reserved. For inquiries: <a href="mailto:hacybertech@gmail.com" style="color: var(--accent-color);">hacybertech@gmail.com</a></p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const themeBtn = document.getElementById('themeToggle');
+      if (body.getAttribute('data-theme') === 'light') {
+        body.removeAttribute('data-theme');
+        themeBtn.textContent = '☀️ Light Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.setAttribute('data-theme', 'light');
+        themeBtn.textContent = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      document.body.setAttribute('data-theme', 'light');
+      document.getElementById('themeToggle').textContent = '🌙 Dark Mode';
+    }
+  </script>
+
+</body>
+</html>
