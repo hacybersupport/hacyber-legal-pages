@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | HACYBERGLOBALTECH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent-color: #38bdf8;
+      --accent-hover: #0284c7;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --border-color: #334155;
+      --highlight-bg: rgba(56, 189, 248, 0.08);
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    [data-theme="light"] {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --accent-color: #0284c7;
+      --accent-hover: #0369a1;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --border-color: #e2e8f0;
+      --highlight-bg: rgba(2, 132, 199, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      line-height: 1.7;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    [data-theme="light"] header {
+      background-color: rgba(248, 250, 252, 0.85);
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      color: var(--accent-color);
+    }
+
+    .theme-toggle {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 3rem;
+    }
+
+    /* Sidebar Navigation */
+    aside {
+      position: sticky;
+      top: 6rem;
+      height: calc(100vh - 8rem);
+      overflow-y: auto;
+    }
+
+    .toc {
+      list-style: none;
+    }
+
+    .toc li {
+      margin-bottom: 0.5rem;
+    }
+
+    .toc a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      display: block;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .toc a:hover, .toc a.active {
+      color: var(--accent-color);
+      background-color: var(--highlight-bg);
+      font-weight: 500;
+    }
+
+    /* Main Content */
+    main {
+      min-width: 0;
+    }
+
+    .hero-section {
+      margin-bottom: 3rem;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta-tag {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .policy-section {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      scroll-margin-top: 6rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .policy-section h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .in-short {
+      background-color: var(--highlight-bg);
+      border-left: 3px solid var(--accent-color);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1.25rem;
+      font-size: 0.925rem;
+      color: var(--text-secondary);
+    }
+
+    .in-short strong {
+      color: var(--accent-color);
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-size: 0.975rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 0.975rem;
+    }
+
+    li strong {
+      color: var(--text-primary);
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-card {
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        display: none;
+      }
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="brand">HACYBER<span>GLOBALTECH</span></a>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">☀️ Light Mode</button>
+  </header>
+
+  <div class="container">
+    <aside>
+      <ul class="toc">
+        <li><a href="#section-1">1. Information Collection</a></li>
+        <li><a href="#section-2">2. Processing Usage</a></li>
+        <li><a href="#section-3">3. Legal Bases</a></li>
+        <li><a href="#section-15">15. Third-Party Platforms</a></li>
+        <li><a href="#section-16">16. Payments & Stripe</a></li>
+        <li><a href="#section-17">17. Data Security</a></li>
+        <li><a href="#section-18">18. Updates</a></li>
+        <li><a href="#section-19">19. Contact Us</a></li>
+        <li><a href="#section-20">20. Data Rights</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <div class="hero-section">
+        <h1>Privacy Policy</h1>
+        <p class="meta-tag">Effective Date: September 2026 | Document Ref: HGT-PRIVACY-v2</p>
+      </div>
+
+      <section id="section-1" class="policy-section">
+        <h2>1. WHAT INFORMATION DO WE COLLECT?</h2>
+        <div class="in-short">
+          <strong>In Short:</strong> We collect personal information you provide to us alongside limited data from verified third-party platforms.
+        </div>
+        <p>We collect personal information that you voluntarily provide when registering on our Services, expressing interest in obtaining details about our solutions, or contacting our support team directly.</p>
+      </section>
+
+      <section id="section-2" class="policy-section">
+        <h2>2. HOW DO WE PROCESS YOUR INFORMATION?</h2>
+        <div class="in-short">
+          <strong>In Short:</strong> We process your information to deliver, manage, and optimize our services, handle security prevention, and stay compliant with legal frameworks.
+        </div>
+        <ul>
+          <li><strong>Account Management:</strong> Facilitating secure login authentication and maintenance.</li>
+          <li><strong>Service Delivery:</strong> Providing requested onboarding, integration support, and platform services.</li>
+          <li><strong>Customer Support:</strong> Resolving user issues and monitoring system status.</li>
+          <li><strong>Transaction Handling:</strong> Fulfilling and processing service activations and billing.</li>
+        </ul>
+      </section>
+
+      <section id="section-15" class="policy-section">
+        <h2>15. THIRD-PARTY PLATFORMS AND ACCOUNT INFORMATION</h2>
+        <p>When providing support or services related to third-party gig platforms or delivery applications, we only request or process account information necessary to assist you with onboarding, verification, or service execution.</p>
+        <p>HACYBERGLOBALTECH is an independent entity and is not directly affiliated with, sponsored by, or endorsed by third-party gig platforms unless specifically stated. Users are responsible for ensuring that their use of our support services complies with the terms and conditions of their respective platforms.</p>
+      </section>
+
+      <section id="section-16" class="policy-section">
+        <h2>16. PAYMENT INFORMATION AND STRIPE</h2>
+        <p>All payments processed through our platform use secure third-party payment gateways such as Stripe. HACYBERGLOBALTECH does not store complete credit or debit card numbers on our servers. All transaction data handled by third-party payment processors is subject to their privacy policies, security standards, and terms of service.</p>
+      </section>
+
+      <section id="section-17" class="policy-section">
+        <h2>17. DATA SECURITY AND RETENTION</h2>
+        <p>We apply industry-standard security protocols to protect all user data, including personal identifiers and gig platform details. Data retained for legal, financial, or administrative records will be securely archived and isolated until it is no longer needed, at which point it will be permanently deleted or anonymized.</p>
+      </section>
+
+      <section id="section-18" class="policy-section">
+        <h2>18. DO WE MAKE UPDATES TO THIS NOTICE?</h2>
+        <div class="in-short">
+          <strong>In Short:</strong> Yes, we will update this notice as necessary to stay compliant with relevant laws.
+        </div>
+        <p>We may update this Privacy Notice from time to time. The updated version will be indicated by an updated "Revised" date at the top of this document.</p>
+      </section>
+
+      <section id="section-19" class="policy-section">
+        <h2>19. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h2>
+        <p>If you have questions or comments about this privacy policy, you may contact our compliance team directly:</p>
+        <div class="contact-card">
+          <strong>HACYBERGLOBALTECH</strong><br>
+          Email: <a href="mailto:hacybertech@gmail.com">hacybertech@gmail.com</a><br>
+          Portal: <a href="https://web.hacyberglobal.dgdns.org" target="_blank">https://web.hacyberglobal.dgdns.org</a>
+        </div>
+      </section>
+
+      <section id="section-20" class="policy-section">
+        <h2>20. HOW CAN YOU REVIEW, UPDATE, OR DELETE DATA?</h2>
+        <p>Based on applicable laws in your jurisdiction, you may have the right to request access to, update, or delete the personal information we hold. To make a request, submit an email to <a href="mailto:hacybertech@gmail.com">hacybertech@gmail.com</a>. We respond to all data access requests within 30 days.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const themeBtn = document.getElementById('themeToggle');
+      if (body.getAttribute('data-theme') === 'light') {
+        body.removeAttribute('data-theme');
+        themeBtn.textContent = '☀️ Light Mode';
+      } else {
+        body.setAttribute('data-theme', 'light');
+        themeBtn.textContent = '🌙 Dark Mode';
+      }
+    }
+
+    // Dynamic Navigation Active Highlight
+    const sections = document.querySelectorAll('.policy-section');
+    const navLinks = document.querySelectorAll('.toc a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 120) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
